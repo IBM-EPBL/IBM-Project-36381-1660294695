@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Nutrition Assistant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
+    
+    <link rel="stylesheet" href="/static/style4.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ url_for('static', filename='css/style2.css')}}" rel="stylesheet">
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+         <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+          <i class="fa fa-bars"></i>
+          <span class="sr-only">Toggle Menu</span>
+        </button>
+     </div>
+        <h1><a href="/" class="logo">Nutrition  Assistant</a></h1>
+     <ul class="list-unstyled components mb-5">
+       <li class="active">
+         <a href="/"><span class="fa fa-home mr-3"></span> Home</a>
+       </li>
+       <li>
+           <a href="/signin"><span class="fa fa-user mr-3"></span> Sign In</a>
+       </li>
+       <li>
+         <a href="/signup"><span class="fa fa-user mr-3"></span> Sign Up</a>
+     </li>
+       <li>
+         <a href="/window"><span class="fa fa-sticky-note mr-3"></span> Upload Image</a>
+       </li>
+       <li> 
+         <a href="/admin"><span class="fa fa-paper-plane mr-3"></span> Admin</a>
+       </li>
+       <li>
+         <a href="#"><span class="fa fa-paper-plane mr-3"></span> Information</a>
+       </li>
+     </ul>
+
+    </nav>
+   </head>
+     <!-- Page Content  -->
+     <div id="content" class="p-4 p-md-5 pt-5">
+      <body>
+         <center>
+            <body>
+                <div class="windows">
+                    <form action="{{ url_for('window') }}" method="POST">
+                        <h1>What are the nutrition value present in your food just submit image  to know.</h1>
+                        <div class="foodname">
+                            <h2>Food name :</h2>
+                            <input type="text" class="food-name" name="foodname">
+                            <button class="button-search" type="submit">Search</button>
+                        </div><br>
+                        <div class="imagesearch">
+                            <input type="file" accept="image/*" class="request-image" id="image" name="image">
+                            <input class="btn btn-outline-primary" type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </body>
+         
+         </center>
+      
+        </body>
+     </div>
+   </div>
+
+ <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+ <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+ <script src="{{ url_for('static', filename='js/popper.js')}}"></script>
+ <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+</html>
